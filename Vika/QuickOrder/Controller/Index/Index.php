@@ -1,18 +1,50 @@
 <?php
 
+namespace Vika\Quickorder\Controller\Adminhtml\Index;
 
-namespace Vika\QuickOrder\Controller\Index;
-
-use Magento\Framework\App\Action\Action;
-use Magento\Framework\Controller\ResultFactory;
+use Magento\Backend\App\Action;
+use Magento\Framework\App\ResponseInterface;
+use Magento\Framework\View\Result\PageFactory;
+use Magento\Backend\App\Action\Context;
 
 class Index extends Action
 {
+    const ADMIN_RESOURCE = 'Vika_Quickorder::config';
+
     /**
-     * @inheritDoc
+     * @var bool|PageFactory
+     */
+    protected $resultPageFactory = false;
+
+    /**
+     * Index constructor.
+     *
+     * @param Context     $context
+     * @param PageFactory $resultPageFactory
+     */
+    public function __construct(
+        Context $context,
+        PageFactory $resultPageFactory)
+    {
+        parent::__construct($context);
+        $this->resultPageFactory = $resultPageFactory;
+    }
+
+    /**
+     * @return ResponseInterface|\Magento\Framework\Controller\ResultInterface|\Magento\Framework\View\Result\Page
      */
     public function execute()
     {
-        return $this->resultFactory->create(ResultFactory::TYPE_PAGE);
+        $resultPage = $this->resultPageFactory->create();
+
+        return $resultPage;
+    }
+
+    /**
+     * @return bool
+     */
+    protected function _isAllowed()
+    {
+        return $this->_authorization->isAllowed(static::ADMIN_RESOURCE);
     }
 }
