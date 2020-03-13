@@ -3,9 +3,9 @@
 namespace Vika\QuickOrder\Model\ResourceModel;
 
 use Magento\Framework\Model\ResourceModel\Db\AbstractDb;
-use Vika\QuickOrder\Api\Model\Schema\QuickOrderSchemaInterface;
+use Vika\QuickOrder\Api\Model\Schema\StatusSchemaInterface;
 
-class QuickOrder extends AbstractDb
+class Status extends AbstractDb
 {
 
     /**
@@ -15,6 +15,6 @@ class QuickOrder extends AbstractDb
      */
     protected function _construct()
     {
-        $this->_init(QuickOrderSchemaInterface::TABLE_NAME, QuickOrderSchemaInterface::ORDER_ID_COL_NAME);
+        $this->_init(StatusSchemaInterface::TABLE_NAME, StatusSchemaInterface::STATUS_ID_COL_NAME);
     }
 }

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add
+                id="Vika_QuickOrder::all"
+                title="Quick Order"
+                translate="title"
+                module="Vika_QuickOrder"
+                sortOrder="20"
+                dependsOnModule="Vika_QuickOrder"
+                resource="Vika_QuickOrder::all"
+        />
+        <add
+                id="Vika_QuickOrder::grid"
+                title="Order Grid"
+                translate="title"
+                module="Vika_QuickOrder"
+                sortOrder="10"
+                parent="Vika_QuickOrder::all"
+                action="quickorder/index/listing"
+                resource="Vika_QuickOrder::grid"
+        />
+        <add
+                id="Vika_QuickOrder::status"
+                title="Status Grid"
+                translate="title"
+                module="Vika_QuickOrder"
+                sortOrder="11"
+                parent="Vika_QuickOrder::all"
+                action="quickorder/index/statuslisting"
+                resource="Vika_QuickOrder::status"
+        />
+    </menu>
+</config>
