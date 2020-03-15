@@ -7,7 +7,7 @@ use Magento\Framework\Setup\InstallDataInterface;
 use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Psr\Log\LoggerInterface;
-use Thesis\QuickOrder\Api\Model\Schema\StatusSchemaInterface;
+use Vika\QuickOrder\Api\Model\Schema\StatusSchemaInterface;
 
 class InstallData implements InstallDataInterface
 {
@@ -18,7 +18,7 @@ class InstallData implements InstallDataInterface
 
     private $logger;
 
-    public function __construct(\Thesis\QuickOrder\Model\StatusFactory $postFactory, TransactionFactory $transactionFactory, LoggerInterface $logger)
+    public function __construct(\Vika\QuickOrder\Model\StatusFactory $postFactory, TransactionFactory $transactionFactory, LoggerInterface $logger)
     {
         $this->transactionFactory = $transactionFactory;
         $this->_postFactory = $postFactory;

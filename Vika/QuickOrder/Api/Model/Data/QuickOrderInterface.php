@@ -5,9 +5,9 @@ namespace Vika\QuickOrder\Api\Model\Data;
 
 interface QuickOrderInterface
 {
-    const CACHE_TAG                 = 'thesis_quickorder';
+    const CACHE_TAG                 = 'vika_quickorder';
 
-    const REGISTRY_KEY              = 'thesis_quickorder_lesson';
+    const REGISTRY_KEY              = 'vika_quickorder_lesson';
 
     const ID_FIELD                  = 'order_id';
     /**

@@ -9,10 +9,10 @@ use Magento\Framework\Model\ResourceModel\AbstractResource;
 use Magento\Framework\Registry;
 use Magento\Framework\Exception\LocalizedException;
 use Magento\Framework\Stdlib\DateTime\TimezoneInterface;
-use Thesis\QuickOrder\Api\Model\Data\QuickOrderInterface;
-use Thesis\QuickOrder\Api\Model\Data\StatusInterface;
-use Thesis\QuickOrder\Api\Model\Schema\QuickOrderSchemaInterface;
-use Thesis\QuickOrder\Model\ResourceModel\QuickOrder as ResourceModel;
+use Vika\QuickOrder\Api\Model\Data\QuickOrderInterface;
+use Vika\QuickOrder\Api\Model\Data\StatusInterface;
+use Vika\QuickOrder\Api\Model\Schema\QuickOrderSchemaInterface;
+use Vika\QuickOrder\Model\ResourceModel\QuickOrder as ResourceModel;
 
 class QuickOrder extends AbstractModel implements QuickOrderInterface
 {

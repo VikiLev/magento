@@ -3,9 +3,9 @@
 namespace Vika\QuickOrder\Model;
 
 use Magento\Framework\Model\AbstractModel;
-use Thesis\QuickOrder\Api\Model\Data\StatusInterface as InterfaceStatus;
-use Thesis\QuickOrder\Api\Model\Schema\StatusSchemaInterface;
-use Thesis\QuickOrder\Model\ResourceModel\Status as ResourceModel;
+use Vika\QuickOrder\Api\Model\Data\StatusInterface as InterfaceStatus;
+use Vika\QuickOrder\Api\Model\Schema\StatusSchemaInterface;
+use Vika\QuickOrder\Model\ResourceModel\Status as ResourceModel;
 
 class Status extends AbstractModel implements InterfaceStatus
 {

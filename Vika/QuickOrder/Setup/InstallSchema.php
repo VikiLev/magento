@@ -3,8 +3,8 @@ namespace Vika\QuickOrder\Setup;
 
 use Magento\Framework\DB\Ddl\Table;
 use Magento\Framework\Setup\SchemaSetupInterface;
-use Thesis\QuickOrder\Api\Model\Schema\QuickOrderSchemaInterface;
-use Thesis\QuickOrder\Api\Model\Schema\StatusSchemaInterface;
+use Vika\QuickOrder\Api\Model\Schema\QuickOrderSchemaInterface;
+use Vika\QuickOrder\Api\Model\Schema\StatusSchemaInterface;
 use Magento\Framework\DB\Adapter\AdapterInterface;
 
 class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface
@@ -120,7 +120,7 @@ class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface
             1,
             ['nullable' => false,  'default' => 0]
         )->setComment(
-            'Thesis Quick Order Status'
+            'Vika Quick Order Status'
         );
         $setup->getConnection()->createTable($table);
     }
